@@ -16,7 +16,7 @@ It comes with ready‑made sections (publications, news, education, honors, etc.
 ## 🚀 Getting Started
 
 ```bash
-git clone <your-repo-url> homepage-template
+git clone https://github.com/Xiaohao-Liu/Homepage-Template homepage-template
 cd homepage-template
 pnpm install
 pnpm dev

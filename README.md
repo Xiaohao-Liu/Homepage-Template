@@ -1,50 +1,69 @@
-# Vite & NextUI Template
+# Academic Homepage Template
 
-This is a template for creating applications using Vite and NextUI (v2).
+An academic homepage template built with **Vite + React + NextUI v2 + Tailwind CSS**.  
+It comes with ready‑made sections (publications, news, education, honors, etc.), dark mode, animations, and a fully responsive layout, so you can quickly set up a personal or group website.
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/vite-template)
+**Live Demo**: [xiaohao-liu.github.io](https://xiaohao-liu.github.io/)
 
-## Technologies Used
+## ✨ Features
 
-- [Vite](https://vitejs.dev/guide/)
-- [NextUI](https://nextui.org)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Framer Motion](https://www.framer.com/motion)
+- **Modern stack**: Vite, React, TypeScript, NextUI, Tailwind CSS
+- **Academic oriented**: pre‑built modules for publications, news, education, honors
+- **Data‑driven**: update content via files in `src/data`
+- **Dark / light themes** with smooth animations and mobile‑friendly layout
+- **pnpm‑first workflow** (but can be used with npm/yarn/bun as well)
 
-## How to Use
-
-To clone the project, run the following command:
+## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/nextui-org/vite-template.git
+git clone <your-repo-url> homepage-template
+cd homepage-template
+pnpm install
+pnpm dev
 ```
 
-### Install dependencies
+By default, the dev server runs at `http://localhost:5173`.
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+## 🔧 Scripts
+
+| Command         | Description              |
+| -------------- | ------------------------ |
+| `pnpm dev`     | Start the development server |
+| `pnpm build`   | Build for production     |
+| `pnpm preview` | Preview the production build |
+
+## 🗂️ Project Structure
+
+```text
+src/
+├─ assets/      # Images, icons and other static assets
+├─ components/  # Reusable UI components
+├─ config/      # Site-level config (e.g. social links)
+├─ data/        # Academic data (papers, education, honors, news, etc.)
+├─ pages/       # Page entries
+└─ styles/      # Global styles
+```
+
+> To customize most of the homepage content, you mainly edit `src/data` and `src/config/site.ts`.
+
+## 🧩 Customization Guide
+
+- **Profile / bio**: edit `src/data/profile.tsx`
+- **Selected publications**: edit `src/data/paper_selected.tsx`
+- **All publications**: edit `src/data/all_paper.tsx`
+- **News / honors / education**: edit `src/data/news.tsx`, `src/data/honor.tsx`, `src/data/education.tsx`
+- **Site meta & navigation**: tweak `src/config/site.ts` and `src/components/navbar.tsx`
+
+## 📦 Deployment
+
+This is a static site and can be deployed to any static hosting service (Vercel, Netlify, GitHub Pages, etc.):
 
 ```bash
-npm install
+pnpm build
 ```
 
-### Run the development server
+The production assets are generated in the `dist/` directory.
 
-```bash
-npm run dev
-```
+## 📄 License
 
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/vite-template/blob/main/LICENSE).
+This template is open‑sourced under the [MIT License](./LICENSE). You are welcome to use and modify it for your own homepage.

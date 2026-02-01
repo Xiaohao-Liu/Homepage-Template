@@ -10,11 +10,15 @@ export const profileData = {
   description: (
     <>
       Hey, I am{" "}
-      <span style={{ fontFamily: "Oleo Script", fontSize: "1.2rem" }}>
+      <span style={{
+        fontFamily: "Oleo Script",
+        fontSize: "1.1rem",
+        color: "#0c58ac"
+      }}>
         Xiaohao Liu
       </span>
       , a second-year Ph.D. student at{" "}
-      <strong>National University of Singapore</strong>. Before that, I obtained
+      <strong>National University of Singapore</strong>, advised by <a href="https://www.comp.nus.edu.sg/~ngsk/" style={{ fontWeight: "bold" }} target="_blank">Prof. Ng See-Kiong</a> and <a href="https://www.chuatatseng.com/" style={{ fontWeight: "bold" }} target="_blank">Prof. Chua Tat-Seng</a>. Before that, I obtained
       the M.S. degree in Cyberscurity at{" "}
       <strong>University of Chinese Academy of Sciences</strong>, and obtained
       the B.E. degree in Computer Science at{" "}
@@ -24,11 +28,11 @@ export const profileData = {
       <span
         style={{
           fontFamily: "Oleo Script",
-          fontSize: "1.2rem",
+          fontSize: "1.1rem",
           color: "#0c58ac",
         }}
       >
-        &quot;trustworthy multimodal learning&quot;
+        trustworthy multimodal learning
       </span>
       .
       <br />

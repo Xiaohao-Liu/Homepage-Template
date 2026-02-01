@@ -22,24 +22,46 @@ import { Honor } from "@/components/honor";
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <div className="absolute w-full left-1/4 rotate-12 blur-2xl top-1/5 ">
+      <div className="absolute w-full left-1/4 top-1/5 animate-gradient-float">
         <svg
-          className=" blur-2xl"
+          className="animate-gradient-blur"
           viewBox="0 0 1440 320"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            className="animate-gradient-stroke"
             d="M0,160L48,170.7C96,181,192,203,288,192C384,181,480,139,576,138.7C672,139,768,181,864,186.7C960,192,1056,160,1152,160C1248,160,1344,192,1392,208L1440,224L1440Z"
             fillOpacity="0"
             stroke="url(#gradient)"
-            strokeOpacity={0.1}
+            strokeOpacity={1.0}
             strokeWidth={100}
           />
           <defs>
             <linearGradient id="gradient" x1="0" x2="1" y1="0" y2="0">
-              <stop offset="0%" stopColor="#91EAE4" />
-              <stop offset="50%" stopColor="#86A8E7" />
-              <stop offset="100%" stopColor="#7F7FD5" />
+              <stop offset="0%" stopColor="#91EAE4">
+                <animate
+                  attributeName="stop-color"
+                  dur="8s"
+                  repeatCount="indefinite"
+                  values="#91EAE4;#7F7FD5;#86A8E7;#91EAE4"
+                />
+              </stop>
+              <stop offset="50%" stopColor="#86A8E7">
+                <animate
+                  attributeName="stop-color"
+                  dur="8s"
+                  repeatCount="indefinite"
+                  values="#86A8E7;#91EAE4;#7F7FD5;#86A8E7"
+                />
+              </stop>
+              <stop offset="100%" stopColor="#7F7FD5">
+                <animate
+                  attributeName="stop-color"
+                  dur="8s"
+                  repeatCount="indefinite"
+                  values="#7F7FD5;#86A8E7;#91EAE4;#7F7FD5"
+                />
+              </stop>
             </linearGradient>
           </defs>
         </svg>
@@ -50,13 +72,14 @@ export default function IndexPage() {
             <div className="flex gap-5 items-center relative overflow-visible">
               <Image
                 isZoomed
+                // isBlurred
                 className="aspect-square overfolow-visible"
-                radius="full"
+                // radius="full"
                 src={profileData.photo}
                 width={100}
               />
               <div className="flex flex-col">
-                <p className="text-md font-bold">
+                <p className="text-lg font-bold">
                   {profileData.name} ({profileData.name_zh})
                 </p>
                 <p className="text-small text-default-500">
@@ -86,7 +109,7 @@ export default function IndexPage() {
             radius="lg"
             size="sm"
             symbol={<EmailIcon className="inline pr-1" />}
-            variant="flat"
+            variant="light"
           >
             {profileData.email}
           </Snippet>
@@ -97,7 +120,7 @@ export default function IndexPage() {
             // color="primary"
             href={siteConfig.links.scholar}
             radius="full"
-            variant="flat"
+            variant="light"
           >
             <ScholarIcon />{" "}
             <span className="hidden sm:inline">Google Scholar</span>
@@ -108,7 +131,7 @@ export default function IndexPage() {
             as={Link}
             href={siteConfig.links.github}
             radius="full"
-            variant="flat"
+            variant="light"
           >
             <GithubIcon /> <span className="hidden sm:inline">GitHub</span>
           </Button>

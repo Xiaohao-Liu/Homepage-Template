@@ -2,6 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Xiaohao Liu's Homepage",
+  year: new Date().getFullYear(),
   description: "Xiaohao Liu's Homepage",
   navItems: [
     {

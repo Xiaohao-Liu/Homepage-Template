@@ -19,7 +19,8 @@ export const Paper = ({
           <p className="text-normal font-bold">{title}</p>
           <small className="text-default-500">{authors}</small>
           <small className="text-default-500 font-bold">
-            {accepted} {date}
+            {/* {accepted} {date} */}
+            <span style={{ fontFamily: "Sans Serif" }}>{accepted} {date}</span>
           </small>
         </div>
 
@@ -33,7 +34,7 @@ export const Paper = ({
               href={paper_link}
               radius="full"
               size="sm"
-              variant="flat"
+              variant="light"
             >
               <PaperIcon />
             </Button>
@@ -46,7 +47,7 @@ export const Paper = ({
               isDisabled={code_link === ""}
               radius="full"
               size="sm"
-              variant="flat"
+              variant="light"
             >
               <GithubIcon />
             </Button>

@@ -18,9 +18,8 @@ export const Papers = () => {
       {/* </ScrollShadow> */}
 
       <br />
-      <Code className="uppercase" color="primary">
-        Stay Hungry, Stay Foolish
-      </Code>
+      <center style={{ fontFamily: "Oleo Script" }}>&quot;Stay Hungry, Stay Foolish&quot;</center>
+
       {/* <Snippet symbol="" variant="bordered">Stay Hungry, Stay Foolish</Snippet> */}
     </div>
   );

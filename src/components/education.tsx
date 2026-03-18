@@ -8,8 +8,8 @@ export const Education = () => {
     <div className="flex flex-wrap md:flex-nowrap gap-4 w-full ">
       {educationData.map((item, index) => (
         <Card key={index} className="w-full shadow-none  bg-gray-0" shadow="sm">
-          <CardBody className="overflow-visible items-center">
-            <div className="flex justify-center gap-4">
+          <CardBody className="overflow-visible items-start">
+            <div className="flex justify-start gap-4">
               <Image
                 // isBlurred
                 alt={item.institution}

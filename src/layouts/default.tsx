@@ -13,7 +13,7 @@ export default function DefaultLayout({
         {children}
       </main>
       <footer className="w-full flex items-center justify-center py-3 text-small">
-        © 2025 {siteConfig.name}
+        © {siteConfig.year} {siteConfig.name}
       </footer>
     </div>
   );

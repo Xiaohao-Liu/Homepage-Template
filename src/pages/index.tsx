@@ -67,13 +67,13 @@ export default function IndexPage() {
         </svg>
       </div>
       <section className="max-w-[800px] flex flex-col items-center justify-center mx-auto gap-4 py-5 md:py-5">
-        <Card className="w-full shadow-none  bg-gray-0">
+        <Card className="w-full shadow-none  bg-gray-0 ">
           <CardHeader className="justify-between">
-            <div className="flex gap-5 items-center relative overflow-visible">
+            <div className="flex gap-5 items-end relative overflow-visible">
               <Image
-                isZoomed
                 // isBlurred
-                className="aspect-square overfolow-visible"
+                isZoomed
+                className="aspect-square overflow-visible"
                 // radius="full"
                 src={profileData.photo}
                 width={100}
@@ -105,7 +105,7 @@ export default function IndexPage() {
         <div className="flex gap-3 flex-row hidden sm:flex">
           <Snippet
             className="rounded-full px-3 py-1"
-            color="primary"
+            // color="primary"
             radius="lg"
             size="sm"
             symbol={<EmailIcon className="inline pr-1" />}

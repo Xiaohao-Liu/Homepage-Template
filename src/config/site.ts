@@ -13,11 +13,43 @@ export const siteConfig = {
       label: "Publications",
       href: "/pub",
     },
+    {
+      label: "News",
+      href: "/news",
+    },
+    {
+      label: "Education",
+      href: "/education",
+    },
+    {
+      label: "Honor",
+      href: "/honor",
+    },
+    {
+      label: "Services",
+      href: "/services",
+    },
   ],
   navMenuItems: [
     {
       label: "Publications",
       href: "/pub",
+    },
+    {
+      label: "News",
+      href: "/news",
+    },
+    {
+      label: "Education",
+      href: "/education",
+    },
+    {
+      label: "Honor",
+      href: "/honor",
+    },
+    {
+      label: "Services",
+      href: "/services",
     },
   ],
   links: {

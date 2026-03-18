@@ -56,22 +56,24 @@ export const Navbar = () => {
           >
             <p className="font-bold text-inherit">Xiaohao Liu</p>
           </Link>
-          <span className="mx-2">|</span>
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <Link
-                as={RouterLink}
-                className="flex justify-start items-center gap-1 font-bold"
-                color={
-                  location.pathname === item.href ? "primary" : "foreground"
-                }
-                href={item.href}
-                style={{ fontFamily: "Oleo Script" }}
-              >
-                <p className="font-bold text-inherit">{item.label}</p>
-              </Link>
-            </NavbarItem>
-          ))}
+          <span className="mx-2 hidden sm:inline-block">|</span>
+          <div className="hidden sm:flex">
+            {siteConfig.navItems.map((item) => (
+              <NavbarItem key={item.href}>
+                <Link
+                  as={RouterLink}
+                  className="flex justify-start items-center gap-1 font-bold mx-2"
+                  color={
+                    location.pathname === item.href ? "primary" : "foreground"
+                  }
+                  href={item.href}
+                  style={{ fontFamily: "Oleo Script" }}
+                >
+                  <p className="font-bold text-inherit">{item.label}</p>
+                </Link>
+              </NavbarItem>
+            ))}
+          </div>
         </NavbarBrand>
       </NavbarContent>
 
